@@ -1,0 +1,54 @@
+{
+	"items":[
+	
+	{
+		"id":"1",
+		"name":"item 1",
+		"description": "este es el producto 1",
+		"category":"proyecto",
+		"subcategory": "uiwi frutas",
+		"photo":"../assets/photo1.jpeg"
+	},
+
+	{
+		"id":"2",
+		"name":"item 2",
+		"description": "este es el producto 2",
+		"category":"proyecto",
+		"subcategory": "packaging",
+		"photo":"../assets/photo2.jpeg"
+	},
+	{
+		"id":"3",
+		"name":"item 3",
+		"description": "este es el producto 3",
+		"category":"producto",
+		"subcategory": "growler",
+		"photo":"../assets/photo3.jpeg"
+	},
+	{
+		"id":"4",
+		"name":"item 4",
+		"description": "este es el producto 4",
+		"category":"producto",
+		"subcategory": "lamp mixta",
+		"photo":"../assets/photo4.jpg"
+	},
+	{
+		"id":"5",
+		"name":"item 5",
+		"description": "este es el producto 5",
+		"category":"producto",
+		"subcategory": "on balance",
+		"photo":"../assets/photo5.jpg"
+	},
+	{
+		"id":"6",
+		"name":"item 6",
+		"description": "este es el producto 6",
+		"category":"proyecto",
+		"subcategory": "uiwi frutas",
+		"photo":"../assets/photo6.jpg"
+	}
+]
+}
