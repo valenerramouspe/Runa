@@ -1,152 +1,414 @@
-.container {
-    zoom: 1; /* IE6&7 */
-    display: block;
-    width: 100vw;
-    height: 100vh
+@import "slick.css";
+@import "slick-theme.css";
+@font-face{
+	font-family: "DINNextLTPro Medium";
+	src: url('./fonts/DINNextLTPro-Medium.otf');
 }
 
-.container:before,
-.container:after {
-    content: "";
-    display: table;
+@font-face{
+	font-family: "DINNextLTPro Regular";
+	src: url('./fonts/DINNextLTPro-Regular.otf');
 }
 
-.container:after {
-    clear: both;
+html, body, #app, #app>div{
+	padding: 0;
+	margin:0;
+   	width: 100vw;
+   	height: 100vh;
 }
 
-#nav{
-	border-style: solid;
-	border-color: green;
-	margin: 10px;
-	margin-bottom: 0px
+/*[data-reactroot] {
+	height: 100% !important; 
+}*/
+
+#home{
+	background-image: url("../assets/brown-paper-cardboard-and-texture-11.png");
+/*	background-color: #bfafa0;*/
+	height: 100% !important;
+	width: 100vw
 }
-#pagina{
-	border-color: #ea83e0;
-	border-style: solid;
-	margin: 10px;
-	margin-top: 0px
-}
-#input{
-	border-color: black;
-	border-style: solid;
-	margin: 10px;
-	margin-bottom: 0px
-}
-#output{
-	border-color: yellow;
-	border-style: solid;
-	margin: 10px;
-	margin-top: 0px
-}
-.fadeScreen{
-	position: relative;
-}
-#startup{
+
+#homeBlock{
+	margin: auto;
 	position: absolute;
-	height:100vh;
-	width: 100vw;
+	left: 30%
 }
 
-.wires {
-    background-repeat: no-repeat;
-    -webkit-animation-duration: 5s;animation-duration: 5s;
-    -webkit-animation-fill-mode: both;animation-fill-mode: both;
+#homeTop{
+	display: block;
+	margin-left: 35%;
+	padding-top: 2%
 }
-         
-@-webkit-keyframes fadeOut {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
+
+#homeMiddle{
+	display: block;
+	margin-left: 30%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	vertical-align: middle;
 }
-         
-@keyframes fadeOut {
-   	0% {opacity: 1;}
-    100% {opacity: 0;}
+
+#homeBottom{
+	display: block;
+	margin-left: 40%;
 }
-         
-.fadeOut {
-    -webkit-animation-name: fadeOut;
-    animation-name: fadeOut;
+
+.cutTop img{
+	width: 30%;
+	height: 25%;
+	display: block;
+	margin-left: 35%;
+	padding-top: 2%;
 }
-#title{
+.cutMiddle img{
+	height: 25%;
+	width: 30%;
+	padding-top: 3%;
+	display: block;
+	margin-left: 30%;
+}
+
+.cutBottom img{
+	height: 25%;
+	width: 30%;
+	padding-top: 3%;
+	display: block;
+	margin-left: 40%;
+}
+
+/*.cuts:active img{
+	padding-top: 0;
+	margin-left: 40%;
+	height: 33%;
+	width: 35%;
+}*/
+
+.hola img{
+	padding-top: 0;
+	margin-left: 54%;
+	height: 43%;
+	width: 45%;
+}
+
+.cuts .greenCircle{
+	width: 500px;
+	position: fixed;
+    height: 500px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 50%;
+    background: #00ab4e;
+    position: absolute;
+    bottom: 12%;
+    left: 25%;
+    opacity: 0.7;
+    pointer-events: none;
+    /*overflow: hidden;*/
+    transition: all 1s ease;
+    transition-property: height, width, left
+}
+
+.cuts:active .greenCircle{
+	height: 100vh;
+	width: 100vw;
+	left: 20%
+}
+
+.yellowCircle{
+	width: 500px;
+	position: fixed;
+    height: 500px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 50%;
+    background: #E7AE00;
+    position: absolute;
+    bottom: 15%;
+    left: 25%;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+#textBlock{
 	position: absolute;
 	z-index: 5;
-	font-size: 200px;
-	width: 100vw;
-	background: rgba(229, 229, 229, 0.9);
-	text-align: center;
-
+	left: 33%
 }
 
-#sidebar{
-	width: 20%;
-    height: 100vh;
-    bottom: 0;
-    left:0;
+#runa{
+	z-index: 5;
+	left: 35%;
+	font-size: 120px;
+	margin: 0;
+	color: white;
+	font-weight: 1
+}
+
+#estudio{	
+	left: 30%;
+	z-index: 5;
+	margin: 0;
+}
+
+.navbar {
+    /*overflow: hidden;*/
+    font-family: "DINNextLTPro Medium";
     position: fixed;
-	background: rgba(229, 229, 229, 0.9);
+    bottom: 12%;
+    width: 100%;
+}
+
+/* Style the links inside the navigation bar */
+.idle {
+    float: left;
+    color: white;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-left: 6%;
+    opacity: 0.6
+}
+
+.selected{
+	float: left;
+    color: white;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    font-size: 22px;
+    margin-left: 6%;
+	opacity: 1;
+}
+
+/* Change the color of links on hover */
+.idle:hover {
+    opacity: 1;
+}
+
+/* Add a color to the active/current link */
+.navbar a.active {
+    opacity: 1;
+}
+
+#carousel{
+	height: 100% !important;
+/*	overflow: hidden;*/
+}
+
+.cutImage{
+	width: 40%;
+	margin-left: 32%;
+	padding-top: 30%;
+	cursor: pointer;
+	background-image: url('../assets/algiz3rectangulos.png');
+	background-size: 85%;
+	background-repeat: no-repeat;
+	transition: background-image 1s 
+}
+
+.cutImage:hover{
+	background-image: url('../assets/algiz.jpg');
+	background-size: 85%;
+}
+
+.swiper{
+	position: absolute;
+	margin-top: 35%;
+	background-color: grey;
+	opacity: 0.5;
+	padding: 1%;
+	border-radius: 50%;
+	color: #cecece;
+	border: none;
+	outline: none;
+	font-size: 60px;
+	cursor: pointer;
+	z-index: 5
+}
+
+.swiper:hover{
+	color: white
+}
+
+.swipeRight{
+	margin-left: 82%
+}
+
+.swipeLeft{
+	margin-left: 75%
+}
+
+#proyecto1{
+	background-color: #00ab4e;
+	height: 100vh;
+	width: 100vw;
+	padding-top: 3%;
+	box-sizing: border-box;
+	/*overflow: hidden;*/
+}
+
+/*.cuts{
+	overflow-x: hidden
+}*/
+
+.coloredCuts{
+	margin: auto;
+	background-color: #186f11;
+	padding: 70px;
+	position: relative;
+	z-index: 1000;
+	width: 950px;
+	height: 1700px;
+	z-index: 5;
+}
+
+.cuts img{
+	transition: all 1s ease;
+    transition-property: padding-top, margin-left, height, width
+}
+
+.coloredCuts img{
+	transition: all 1s ease;
+    transition-property: padding-top, margin-left, height, width
+}
+
+.proyecto2{
+	background-color: red;
+	height: 100vh;
+	width: 100vw
+}
+
+.galeria{
+	margin: 0;
+	position: absolute;
+	font-size: 9vh;
+	top: 7%;
+	left: 10%
+}
+
+.projectName{
+	position: absolute;
+	top: 15%;
+	font-size: 7vh;
+	color: white;
+	left: 23%
+}
+
+#logoHome{
+	position: absolute;
+	height: 10%;
+	margin-left: 3%;
+	margin-top: 3%;
+	z-index: 10
+}
+
+.visible{
+	position: absolute;
+	top: 40px;
+	margin-left: 50px;
+	width: 400px;
+	z-index: 5
+}
+
+.invisible{
+	display: none;
+}
+
+.productTitle{
+	color: white;
+	font-weight: bolder;
+	font-size: 50px;
 	text-align: center;
 }
 
-.navigation{
-	color: black;
-	font-family: 'Oleo Script Swash Caps';
-	padding-top: 10%;
-	padding-bottom: 10%;
-	font-size: 2vw;
-	margin-bottom: 2%;
-	left: 0
-}
-.navigation:hover{
-	background-color: rgba(170, 170, 170, 0.8);
-}
-.navigation:active{
-	background-color: rgba(137, 137, 137, 0.8)
+.productDescription{
+	color: white;
+	font-weight: bold;
+	line-height: 1.5
 }
 
-.subtitle{
-	font-size: 1.5vw
+.exit{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: white;
+	font-weight: bold;
+	z-index: 5000;
+	cursor: pointer;
 }
 
-.background {
-	position: absolute;
-	height:100vh;
-	width: 100vw;
-	z-index: 0
+.invisibleMenu{
+	display: none
 }
-.content{
+
+.headerNosotras{
+	height: 600px;
+	background-color: #E7AE00
+}
+
+.transparentBlock{
+	opacity: 0.7;
+	z-index: 5;
+	background-color: #E7AE00;
+	height: 100%;
+}
+
+.nosotrasMenu{
+	position: relative;
+}
+
+.tituloNosotras{
 	position: absolute;
-	display: block;
-	width:80%;
-	left: 20%;
-	height: 100vh;
+	top: 175px;
+	left: 375px;
+	height: 175px
+}
+
+.subtitleNosotras{
+	font-family: "DINNextLTPro Regular";
+	position: absolute;
+	width: 500px;
+	top: 400px;
+	color: white;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
 	right: 0;
-	background-color: white;
-	z-index: 5
+	left: 0;
 
 }
 
-.sidebarTextBlock{
-	margin-bottom: 22%
-}
-
-.itemPhoto{
+.nosotrasLowerBlock{
+	/*display: table;*/
+	background-color: #F6BD10;
+	color: white;
 	width: 100%;
-	height: 80%;
-	position: relative;
-	display:flex;
-	align-items: center;
-	justify-content: center;
+	padding-top: 50px
 }
 
-.grid{
-	display: table;
-	left: 15%
-}
-.product{
+.nosotrasLeftColumn{
 	display: table-cell;
-	margin: 1.3%;
-	width:30%;
-	position: relative;
-	float: left;
+	width: 25%;
 }
+
+.nosotrasRightColumn{
+	display: table-cell;
+	width: 25%
+}
+
+.taglineNosotras{
+	font-weight: bold;
+	font-size: 20px;
+	margin-top: 65px
+}
+
+.textNosotras{
+	margin-top: 120px;
+	font-size: 25px;
+}
+
